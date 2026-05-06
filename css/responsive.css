@@ -1,0 +1,59 @@
+/* ═══ RESPONSIVE ═══ */
+
+@media (max-width: 1100px) {
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid  { grid-template-columns: 1fr 1fr; }
+  .explore-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .grid-2-col { grid-template-columns: 1fr; gap: 36px; }
+  .booking-wrap { grid-template-columns: 1fr; gap: 36px; }
+  .location-wrap { grid-template-columns: 1fr; }
+  .rooms-grid { grid-template-columns: 1fr 1fr; }
+  .events-grid { grid-template-columns: 1fr; height: auto; }
+  .event-card.big { grid-row: auto; }
+  .event-img { height: 280px; }
+
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .about-images { display: block; }
+  .about-img-main { height: 260px; margin-bottom: 16px; }
+  .about-img-accent { height: 180px; }
+
+  .dining-imgs { height: 360px; }
+}
+
+@media (max-width: 700px) {
+  .section { padding: 72px 0; }
+  .rooms-grid { grid-template-columns: 1fr; }
+  .explore-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+  .gallery-masonry { grid-template-columns: 1fr 1fr; }
+  .gm-item.tall { grid-row: auto; height: 240px; }
+  .strip-inner { flex-direction: column; gap: 12px; }
+  .strip-divider { display: none; }
+  .hero-badges { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-submit-row { flex-direction: column; }
+  .btn-submit { width: 100%; }
+  .btn-whatsapp-form { width: 100%; text-align: center; }
+  .ecta-inner { padding: 28px 20px; }
+  .booking-form-wrap { padding: 24px; }
+  .rating-summary { flex-direction: column; text-align: center; }
+  .dining-imgs { height: 280px; }
+  .wa-chat-box { width: 290px; }
+  .hero-title { font-size: 2.8rem; }
+  .slide-dots { right: 20px; bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.3rem; }
+  .section-title { font-size: 1.9rem; }
+  .gallery-masonry { grid-template-columns: 1fr; }
+  .gm-item { height: 220px; }
+  .photo-strip { grid-template-columns: 1fr; }
+}

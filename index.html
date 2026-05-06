@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Shanvi Landmark | Panna's Premier Luxury Resort</title>
+  <meta name="description" content="Panna's finest luxury hotel — spacious rooms, fine dining, wedding banquet, near Panna Tiger Reserve & Khajuraho. Book direct at Hotel Shanvi Landmark." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+  </script src="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" rel="canonical"></script>
+  <script src="js/form.js"></script>
+<script src="js/app-script.gs""></script>
+
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-crest">✦</div>
+      <div class="preloader-name">Shanvi Landmark</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-script">Hotel</span>
+        <span class="logo-main">Shanvi Landmark</span>
+        <span class="logo-sub">Panna · Est. Resort</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#rooms">Rooms</a>
+        <a href="#dining">Dining</a>
+        <a href="#events">Events</a>
+        <a href="#explore">Explore Panna</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="#booking" class="nav-book-btn">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#rooms" onclick="closeMobile()">Rooms</a>
+      <a href="#dining" onclick="closeMobile()">Dining</a>
+      <a href="#events" onclick="closeMobile()">Events</a>
+      <a href="#explore" onclick="closeMobile()">Explore Panna</a>
+      <a href="#gallery" onclick="closeMobile()">Gallery</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+      <a href="#booking" class="mobile-book" onclick="closeMobile()">Book Now</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero" id="home">
+      <div class="hero-slides">
+        <div class="slide slide-1 active"></div>
+        <div class="slide slide-2"></div>
+        <div class="slide slide-3"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-up">Panna · Madhya Pradesh · Gateway to Wilderness</p>
+        <h1 class="hero-title reveal-up delay-1">
+          Where Royalty<br>
+          <em>Meets Nature</em>
+        </h1>
+        <p class="hero-desc reveal-up delay-2">
+          Panna's landmark hotel — steps from the Tiger Reserve, temples & diamond country.
+          Luxurious comfort, legendary hospitality.
+        </p>
+        <div class="hero-actions reveal-up delay-3">
+          <a href="#booking" class="btn-gold">Reserve Your Stay</a>
+          <a href="#explore" class="btn-ghost">Explore Panna</a>
+        </div>
+        <div class="hero-badges reveal-up delay-4">
+          <div class="badge">🐯 Tiger Reserve 1.5km</div>
+          <div class="badge">🏛️ Khajuraho 41km</div>
+          <div class="badge">💎 Diamond City</div>
+          <div class="badge">🙏 Temple Town</div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Discover</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+
+      <!-- Slide Dots -->
+      <div class="slide-dots">
+        <button class="dot active" onclick="goSlide(0)"></button>
+        <button class="dot" onclick="goSlide(1)"></button>
+        <button class="dot" onclick="goSlide(2)"></button>
+      </div>
+    </section>
+
+    <!-- ═══════ STRIP STATS ═══════ -->
+    <section class="strip-stats">
+      <div class="strip-inner">
+        <div class="strip-item">
+          <span class="strip-icon">🏆</span>
+          <span class="strip-text">Best Maintained Hotel in Panna</span>
+        </div>
+        <div class="strip-divider">✦</div>
+        <div class="strip-item">
+          <span class="strip-icon">⭐</span>
+          <span class="strip-text">90% Guest Recommendation Rate</span>
+        </div>
+        <div class="strip-divider">✦</div>
+        <div class="strip-item">
+          <span class="strip-icon">🌿</span>
+          <span class="strip-text">Garden & Kids Play Area</span>
+        </div>
+        <div class="strip-divider">✦</div>
+        <div class="strip-item">
+          <span class="strip-icon">🎊</span>
+          <span class="strip-text">Premier Wedding & Banquet Venue</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ ABOUT ═══════ -->
+    <section class="section about-section" id="about">
+      <div class="container grid-2-col">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNWqcK5Bfd-5-DwSOHOq8fCHwgHvJkUiA8kwqRH=s1360-w1360-h1020" alt="Hotel Shanvi Landmark Panna exterior" loading="lazy">
+          </div>
+          <div class="about-img-accent">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMzAnZ8B7w-nD0u3Z34s5E15MjDHBotBpFqLOVR=s1360-w1360-h1020" alt="Hotel lobby" loading="lazy">
+            <div class="about-badge-float">
+              <div class="float-number">24/7</div>
+              <div class="float-label">Service</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div class="section-label">About the Hotel</div>
+          <h2 class="section-title">Panna's Gateway<br>to <em>Luxury Living</em></h2>
+          <p class="section-body">
+            Nestled in Kunjvan, Panna — Hotel Shanvi Landmark is the region's premier hospitality 
+            destination. Perfectly situated just 1.5 km from the Hinauta Gate of Panna Tiger Reserve, 
+            our hotel offers a rare blend of modern luxury and the wild heart of Bundelkhand.
+          </p>
+          <p class="section-body">
+            Whether you're a wildlife enthusiast headed to the safari, a pilgrim visiting Panna's 
+            sacred temples, or a family celebrating life's grandest moments — Shanvi Landmark is 
+            your home away from home.
+          </p>
+          <ul class="about-feats">
+            <li><span class="feat-icon">✦</span> Spacious deluxe & family rooms</li>
+            <li><span class="feat-icon">✦</span> Multi-cuisine restaurant on premises</li>
+            <li><span class="feat-icon">✦</span> Premium banquet & wedding hall</li>
+            <li><span class="feat-icon">✦</span> Kids play area & lush garden</li>
+            <li><span class="feat-icon">✦</span> 1.5 km from Panna Tiger Reserve gate</li>
+            <li><span class="feat-icon">✦</span> 41 km from Khajuraho Airport</li>
+          </ul>
+          <div class="about-cta">
+            <a href="tel:+919859858383" class="btn-gold">Call +91 98598 58383</a>
+            <a href="https://wa.me/919859858383" rel="noopener noreferrer" class="btn-ghost" target="_blank">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ ROOMS ═══════ -->
+    <section class="section rooms-section" id="rooms">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Accommodation</div>
+          <h2 class="section-title">Rooms & Suites</h2>
+          <p class="section-subtitle">Spacious, clean & thoughtfully designed for every guest</p>
+        </div>
+
+        <div class="rooms-grid">
+          <div class="room-card reveal-up">
+            <div class="room-img-wrap">
+              <!-- REPLACE: Add your hotel room photo here -->
+              <div class="img-placeholder">
+                <div class="img-ph-icon">📷</div>
+                <div class="img-ph-text">Add Room Photo</div>
+              </div>
+              <div class="room-tag">Most Popular</div>
+            </div>
+            <div class="room-info">
+              <h3>Deluxe Room</h3>
+              <p>Spacious and well-decorated with modern comforts, ideal for couples and business travelers.</p>
+              <ul class="room-amenities">
+                <li>AC &amp; Heating</li>
+                <li>LED TV</li>
+                <li>24hr Hot Water</li>
+                <li>Room Service</li>
+              </ul>
+              <a href="#booking" class="btn-room">Book This Room</a>
+            </div>
+          </div>
+
+          <div class="room-card reveal-up delay-1">
+            <div class="room-img-wrap">
+              <div class="img-placeholder">
+                <div class="img-ph-icon">📷</div>
+                <div class="img-ph-text">Add Room Photo</div>
+              </div>
+            </div>
+            <div class="room-info">
+              <h3>Family Suite</h3>
+              <p>Extra-large rooms perfect for families. Generous space, comfortable beds and a relaxing ambience.</p>
+              <ul class="room-amenities">
+                <li>Extra Space</li>
+                <li>Garden View</li>
+                <li>Family Beds</li>
+                <li>Kids Friendly</li>
+              </ul>
+              <a href="#booking" class="btn-room">Book This Room</a>
+            </div>
+          </div>
+
+          <div class="room-card reveal-up delay-2">
+            <div class="room-img-wrap">
+              <div class="img-placeholder">
+                <div class="img-ph-icon">📷</div>
+                <div class="img-ph-text">Add Room Photo</div>
+              </div>
+              <div class="room-tag">Premium</div>
+            </div>
+            <div class="room-info">
+              <h3>Premium Suite</h3>
+              <p>Our finest accommodation featuring premium furnishings, superior views and exclusive amenities.</p>
+              <ul class="room-amenities">
+                <li>Premium Décor</li>
+                <li>Luxury Bath</li>
+                <li>Priority Service</li>
+                <li>Special Linen</li>
+              </ul>
+              <a href="#booking" class="btn-room">Book This Room</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rooms-real-photos reveal-up">
+          <div class="section-label" style="text-align:center;margin-bottom:20px;">Real Hotel Photos</div>
+          <div class="photo-strip">
+            <div class="ps-item">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipNWqcK5Bfd-5-DwSOHOq8fCHwgHvJkUiA8kwqRH=s1360-w1360-h1020" alt="Hotel Shanvi Panna" loading="lazy">
+            </div>
+            <div class="ps-item">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipMzAnZ8B7w-nD0u3Z34s5E15MjDHBotBpFqLOVR=s1360-w1360-h1020" alt="Hotel interior" loading="lazy">
+            </div>
+            <div class="ps-item">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipOwXcT3TH4gPrwJoXBh2pvnJxQ9UShFBBb0xYJt=s1360-w1360-h1020" alt="Hotel building" loading="lazy">
+            </div>
+            <div class="ps-item">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipP1fD5VxA5k5XijHXqZhX29MwRa0zC6VdaE2wSE=s1360-w1360-h1020" alt="Hotel dining" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box reveal-up">
+          <span class="info-icon">ℹ️</span>
+          Check-in: 2:00 PM &nbsp;|&nbsp; Check-out: 12:00 PM &nbsp;|&nbsp; Children under 13 stay free &nbsp;|&nbsp; Pets not allowed &nbsp;|&nbsp; Free cancellation 48hrs prior
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ DINING ═══════ -->
+    <section class="section dining-section" id="dining">
+      <div class="dining-bg"></div>
+      <div class="container">
+        <div class="grid-2-col vcenter">
+          <div class="reveal-left">
+            <div class="section-label">Restaurant</div>
+            <h2 class="section-title">A Taste That<br><em>Stays With You</em></h2>
+            <p class="section-body">
+              Our multi-cuisine restaurant serves fresh, hygienic meals that delight every palate. 
+              From rich Indian thalis to family feasts, every dish is crafted with care and quality ingredients.
+            </p>
+            <ul class="dining-list">
+              <li>✦ Multi-cuisine menu — Indian, Chinese &amp; more</li>
+              <li>✦ Fresh, hygienic daily preparation</li>
+              <li>✦ Family &amp; group dining</li>
+              <li>✦ Banquet catering available</li>
+              <li>✦ "Excellent food at reasonable price" — Guests</li>
+            </ul>
+            <a href="tel:+919859858383" class="btn-gold">Reserve a Table</a>
+          </div>
+          <div class="dining-imgs reveal-right">
+            <div class="dining-img-main">
+              <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&q=80" alt="Fine dining" loading="lazy">
+            </div>
+            <div class="dining-img-sm1">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80" alt="Restaurant" loading="lazy">
+            </div>
+            <div class="dining-img-sm2">
+              <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=400&q=80" alt="Indian food" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ EVENTS / BANQUET ═══════ -->
+    <section class="section events-section" id="events">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Celebrations & Events</div>
+          <h2 class="section-title">Grand Moments<br><em>Deserve Grand Spaces</em></h2>
+          <p class="section-subtitle">Panna's premier banquet & wedding venue — for life's most memorable occasions</p>
+        </div>
+
+        <div class="events-grid">
+          <div class="event-card big reveal-left">
+            <div class="event-img">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80" alt="Wedding venue" loading="lazy">
+              <div class="event-overlay">
+                <h3>Weddings</h3>
+                <p>Elegant, spacious hall. Cooperative management. Your dream celebration — right here in Panna.</p>
+                <a href="#contact" class="btn-ghost-sm">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card reveal-right">
+            <div class="event-img">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" alt="Corporate events" loading="lazy">
+              <div class="event-overlay">
+                <h3>Corporate Events</h3>
+                <p>Conferences, seminars & business meets with professional setup.</p>
+                <a href="#contact" class="btn-ghost-sm">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card reveal-right delay-1">
+            <div class="event-img">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Family functions" loading="lazy">
+              <div class="event-overlay">
+                <h3>Family Functions</h3>
+                <p>Anniversaries, receptions, birthdays — celebrated with warmth.</p>
+                <a href="#contact" class="btn-ghost-sm">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-quote reveal-up">
+          <div class="rq-stars">★★★★★</div>
+          <p>"Amazing place for wedding functions. Management is very cooperative for changes which generally happen on weddings. Destination wedding feel!"</p>
+          <span>— Google Guest Review</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ EXPLORE PANNA ═══════ -->
+    <section class="section explore-section" id="explore">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Why Panna</div>
+          <h2 class="section-title">Panna — The City of<br><em>Diamonds, Temples & Tigers</em></h2>
+          <p class="section-subtitle">Stay at Shanvi Landmark — the perfect base to experience everything Panna has to offer</p>
+        </div>
+
+        <div class="explore-grid">
+
+          <div class="explore-card reveal-up">
+            <div class="explore-icon">🐯</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=500&q=80" alt="Tiger safari" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Panna Tiger Reserve</h3>
+              <p>India's 5th Tiger Reserve in MP. Jeep safari, boat safari on Ken River, tigers, leopards, sloth bears & 200+ bird species. Just 1.5km from hotel.</p>
+              <span class="explore-dist">📍 1.5 km from hotel</span>
+            </div>
+          </div>
+
+          <div class="explore-card reveal-up delay-1">
+            <div class="explore-icon">🏛️</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1602432551048-66d38c63c4b9?w=500&q=80" alt="Khajuraho temples" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Khajuraho Temples</h3>
+              <p>UNESCO World Heritage Site. Stunning Chandela dynasty temples (950–1050 AD) — Western, Eastern & Southern groups. One of India's top attractions.</p>
+              <span class="explore-dist">📍 41 km from hotel</span>
+            </div>
+          </div>
+
+          <div class="explore-card reveal-up delay-2">
+            <div class="explore-icon">💎</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=500&q=80" alt="Diamond" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Diamond Mines (Majhagaon)</h3>
+              <p>Asia's only active large-scale diamond mine. NMDC-operated. Panna is India's diamond capital — mined for 3,000+ years. A rare experience.</p>
+              <span class="explore-dist">📍 ~20 km from hotel</span>
+            </div>
+          </div>
+
+          <div class="explore-card reveal-up">
+            <div class="explore-icon">🙏</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500&q=80" alt="Hindu temple" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Jugal Kishoreji Temple</h3>
+              <p>Panna's most sacred temple. Bundela architecture, believed to complete the Char Dham pilgrimage. Built by Raja Hindupat Singh in 1758.</p>
+              <span class="explore-dist">📍 In Panna city</span>
+            </div>
+          </div>
+
+          <div class="explore-card reveal-up delay-1">
+            <div class="explore-icon">🌊</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Pandav Falls" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Pandav Falls &amp; Caves</h3>
+              <p>30-metre waterfall inside Panna National Park. Ancient caves at the base. Mythological link to the Pandavas' exile. Stunning year-round.</p>
+              <span class="explore-dist">📍 12 km from Panna</span>
+            </div>
+          </div>
+
+          <div class="explore-card reveal-up delay-2">
+            <div class="explore-icon">🐊</div>
+            <div class="explore-img">
+              <img src="https://images.unsplash.com/photo-1477322524744-0eece9e79640?w=500&q=80" alt="Raneh Falls" loading="lazy">
+            </div>
+            <div class="explore-text">
+              <h3>Raneh Falls &amp; Ken Gharial Sanctuary</h3>
+              <p>Breathtaking 98-ft deep canyon waterfalls on Ken River. Home to rare Gharials & crocodiles. Near Khajuraho — a must-visit.</p>
+              <span class="explore-dist">📍 20 km from Panna</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="explore-cta reveal-up">
+          <div class="ecta-inner">
+            <h3>Need a Safari Booking or Local Tour Guide?</h3>
+            <p>Our team will help you plan your Panna itinerary — tiger safari slots, temple visits, diamond mine tour & more.</p>
+            <a href="https://wa.me/919859858383?text=Hello%2C%20I%20need%20help%20planning%20my%20Panna%20trip%20from%20Shanvi%20Landmark." class="btn-gold" target="_blank" rel="noopener noreferrer">Plan Your Trip via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ GALLERY ═══════ -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Photo Gallery</div>
+          <h2 class="section-title">See Shanvi Landmark</h2>
+          <p class="section-subtitle">Real photos from our hotel — more available on Google Business Profile</p>
+        </div>
+
+        <div class="gallery-masonry">
+          <div class="gm-item tall reveal-up">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNWqcK5Bfd-5-DwSOHOq8fCHwgHvJkUiA8kwqRH=s1360-w1360-h1020" alt="Hotel exterior" loading="lazy">
+            <div class="gm-caption">Hotel Exterior</div>
+          </div>
+          <div class="gm-item reveal-up delay-1">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMzAnZ8B7w-nD0u3Z34s5E15MjDHBotBpFqLOVR=s1360-w1360-h1020" alt="Hotel lobby" loading="lazy">
+            <div class="gm-caption">Lobby Area</div>
+          </div>
+          <div class="gm-item reveal-up delay-2">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOwXcT3TH4gPrwJoXBh2pvnJxQ9UShFBBb0xYJt=s1360-w1360-h1020" alt="Hotel building" loading="lazy">
+            <div class="gm-caption">Hotel Building</div>
+          </div>
+          <div class="gm-item tall reveal-up delay-1">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipP1fD5VxA5k5XijHXqZhX29MwRa0zC6VdaE2wSE=s1360-w1360-h1020" alt="Dining" loading="lazy">
+            <div class="gm-caption">Dining Area</div>
+          </div>
+          <div class="gm-item reveal-up delay-2">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Hotel room" loading="lazy">
+            <div class="gm-caption">Deluxe Room [Add Real Photo]</div>
+          </div>
+          <div class="gm-item reveal-up delay-3">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80" alt="Banquet hall" loading="lazy">
+            <div class="gm-caption">Banquet Hall [Add Real Photo]</div>
+          </div>
+        </div>
+
+        <div class="gallery-add-note reveal-up">
+          <div class="gan-inner">
+            <span>📸</span>
+            <p>More photos available on our <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" target="_blank" rel="noopener noreferrer">Google Business Profile</a>. Hotel owners can add real photos to replace placeholders above.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ REVIEWS ═══════ -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Guest Testimonials</div>
+          <h2 class="section-title">What Our Guests Say</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card reveal-up">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Shanvi Landmark is a decent stay near Panna city. Rooms are spacious and well decorated. Great sleep and service. People are very friendly and courteous."</p>
+            <div class="rc-author">
+              <div class="rc-avatar">R</div>
+              <div>
+                <div class="rc-name">Rahul S.</div>
+                <div class="rc-src">TripAdvisor Review</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card featured reveal-up delay-1">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Amazing place for wedding functions. Management is very cooperative for changes. It's near Khajuraho — get the best of both! Felt like a destination wedding."</p>
+            <div class="rc-author">
+              <div class="rc-avatar">S</div>
+              <div>
+                <div class="rc-name">Saurabh G.</div>
+                <div class="rc-src">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal-up delay-2">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Excellent hotel not only in Panna but Madhya Pradesh. Very good staff and excellent service. One of the best in MP!"</p>
+            <div class="rc-author">
+              <div class="rc-avatar">A</div>
+              <div>
+                <div class="rc-name">Arun M.</div>
+                <div class="rc-src">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal-up delay-3">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Clean, well-maintained rooms. Good ambience. Spacious with a kids play area. One of the best hotels in MP. Beautiful destination, world-class service."</p>
+            <div class="rc-author">
+              <div class="rc-avatar">P</div>
+              <div>
+                <div class="rc-name">Priya K.</div>
+                <div class="rc-src">Trip.com Review</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rating-summary reveal-up">
+          <div class="rs-score">4.2<span>/5</span></div>
+          <div class="rs-info">
+            <div class="rs-stars">★★★★☆</div>
+            <div class="rs-count">Based on 581+ reviews across Google, TripAdvisor &amp; Booking platforms</div>
+            <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" class="rs-link"  target="_blank" rel="noopener noreferrer">Read all reviews on Google →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ BOOKING FORM ═══════ -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        <div class="booking-wrap">
+          <div class="booking-info reveal-left">
+            <div class="section-label">Direct Booking</div>
+            <h2 class="section-title">Book Your Stay<br><em>Directly With Us</em></h2>
+            <p class="section-body">Book direct for best rates, personalised service, and flexible arrangements. Our team responds within 30 minutes.</p>
+            <div class="booking-contact-list">
+              <a href="tel:+919859858383" class="bc-item">
+                <div class="bc-icon">📞</div>
+                <div>
+                  <div class="bc-label">Call Us</div>
+                  <div class="bc-value">+91 98598 58383</div>
+                </div>
+              </a>
+              <a href="tel:+919129120083" class="bc-item">
+                <div class="bc-icon">📞</div>
+                <div>
+                  <div class="bc-label">Alternate</div>
+                  <div class="bc-value">+91 91291 20083</div>
+                </div>
+              </a>
+              <a href="https://wa.me/919859858383" class="bc-item" target="_blank" rel="noopener noreferrer">
+                <div class="bc-icon">💬</div>
+                <div>
+                  <div class="bc-label">WhatsApp</div>
+                  <div class="bc-value">+91 98598 58383</div>
+                </div>
+              </a>
+              <a href="mailto:info@hotelshanvi.com" class="bc-item">
+                <div class="bc-icon">✉️</div>
+                <div>
+                  <div class="bc-label">Email</div>
+                  <div class="bc-value">info@hotelshanvi.com</div>
+                </div>
+              </a>
+              <div class="bc-item">
+                <div class="bc-icon">📍</div>
+                <div>
+                  <div class="bc-label">Address</div>
+                  <div class="bc-value">Gehra Road Kunjvan, Panna MP 488001</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-form-wrap reveal-right">
+            <form class="booking-form" id="bookingForm">
+              <h3>Send Enquiry</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name *</label>
+                  <input type="text" name="name" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                  <label>Mobile Number *</label>
+                  <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Check-in Date *</label>
+                  <input type="date" name="checkin" placeholder="Check-in Date" required>
+                </div>
+                <div class="form-group">
+                  <label>Check-out Date *</label>
+                  <input type="date" name="checkout" placeholder="Check-out Date" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guests">Guests</label>
+                  <select name="guests" id="guests">
+                    <option>1 Guest</option>
+                    <option selected>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4+ Guests</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="room">Room Type</label>
+                  <select name="room" id="room">
+                    <option>Deluxe Room</option>
+                    <option>Family Suite</option>
+                    <option>Premium Suite</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group full">
+                <label>Email Address *</label>
+                <input type="email" name="email" required placeholder="your@email.com">
+              </div>
+              <div class="form-group full">
+                <label>Special Requests / Message</label>
+                <textarea name="message" rows="3" placeholder="Safari booking help, event inquiry, dietary needs..."></textarea>
+              </div>
+              <div class="form-submit-row">
+                <button type="submit" class="btn-submit" id="submitBtn">
+                  <span id="submitText">Send Enquiry</span>
+                  <span id="submitSpinner" style="display:none">Sending...</span>
+                </button>
+                <a href="https://wa.me/919859858383?text=Hello%2C%20I%20want%20to%20book%20a%20room%20at%20Shanvi%20Landmark%20Panna." class="btn-whatsapp-form" rel="noopener noreferrer"  target="_blank">
+                  💬 WhatsApp Instead
+                </a>
+              </div>
+              <div class="form-success" id="formSuccess" style="display:none">
+                ✅ Your enquiry has been sent! Our team will contact you within 30 minutes.
+              </div>
+              <div class="form-error" id="formError" style="display:none">
+                ❌ Something went wrong. Please call us directly.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ MAP / LOCATION ═══════ -->
+    <section class="section location-section" id="contact">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Find Us</div>
+          <h2 class="section-title">Location &amp; Directions</h2>
+        </div>
+        <div class="location-wrap">
+          <div class="location-map reveal-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.7!2d80.1871!3d24.7208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQzJzE1LjAiTiA4MMKwMTEnMTMuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"
+              title="Hotel Shanvi Landmark Panna location">
+            </iframe>
+          </div>
+          <div class="location-info reveal-right">
+            <div class="li-card">
+              <h3>Hotel Shanvi Landmark</h3>
+              <p>Gehra Road, Kunjvan,<br>Mohan Niwas Chouraha,<br>Panna, Madhya Pradesh 488001</p>
+              <div class="li-links">
+                <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" class="btn-gold" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                <a href="https://wa.me/919859858383?text=Hi%2C%20I%20need%20directions%20to%20Shanvi%20Landmark%20Hotel." class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp for Directions</a>
+              </div>
+              <div class="li-dist-list">
+                <div class="ldl-item">🐯 Hinauta Gate (Tiger Reserve) — 1.5 km</div>
+                <div class="ldl-item">✈️ Khajuraho Airport — 41 km</div>
+                <div class="ldl-item">🏛️ Khajuraho Temples — 41 km</div>
+                <div class="ldl-item">🌊 Pandav Falls — 12 km</div>
+                <div class="ldl-item">💎 Diamond Mines — 20 km</div>
+                <div class="ldl-item">🚌 Panna Bus Stand — 1 km</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="fl-script">Hotel</span>
+            <span class="fl-main">Shanvi Landmark</span>
+          </div>
+          <p>Panna's premier luxury hotel — your perfect base for wildlife, temples, diamonds and grand celebrations in the heart of Bundelkhand.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/Shanvilandmarkresortpanna/" target="_blank" rel="noopener" aria-label="Facebook" >f</a>
+            <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" target="_blank" rel="noopener" aria-label="Google">G</a>
+            <a href="https://wa.me/919859858383" target="_blank" rel="noopener" aria-label="WhatsApp">W</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Quick Links</div>
+          <ul>
+            <li><a href="#rooms">Rooms &amp; Suites</a></li>
+            <li><a href="#dining">Restaurant</a></li>
+            <li><a href="#events">Weddings &amp; Events</a></li>
+            <li><a href="#explore">Explore Panna</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+            <li><a href="#booking">Book Direct</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Nearby Attractions</div>
+          <ul>
+            <li>🐯 Panna Tiger Reserve</li>
+            <li>🏛️ Khajuraho Temples</li>
+            <li>💎 Diamond Mines</li>
+            <li>🌊 Pandav &amp; Raneh Falls</li>
+            <li>🙏 Jugal Kishoreji Temple</li>
+            <li>🏰 Ajaygarh Fort</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Contact</div>
+          <ul>
+            <li>📞 +91 98598 58383</li>
+            <li>📞 +91 91291 20083</li>
+            <li>✉️ info@hotelshanvi.com</li>
+            <li>📍 Gehra Road Kunjvan,<br>&nbsp;&nbsp;&nbsp;&nbsp;Panna MP 488001</li>
+          </ul>
+          <div style="margin-top:16px;">
+            <a href="https://wa.me/919859858383" class="btn-gold" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;padding:10px 18px;">WhatsApp Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Hotel Shanvi Landmark, Panna. All rights reserved.</p>
+        <p class="footer-credit">Website designed to showcase the full potential of Shanvi Landmark Resort.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════ WHATSAPP CHATBOT ═══════ -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-chat-box" id="waChatBox">
+      <div class="wa-chat-header">
+        <div class="wa-avatar">🏨</div>
+        <div class="wa-header-info">
+          <div class="wa-name">Shanvi Landmark</div>
+          <div class="wa-status">● Typically replies in minutes</div>
+        </div>
+        <button class="wa-close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-bubble">
+          <p>👋 Welcome to <strong>Hotel Shanvi Landmark</strong>, Panna!</p>
+          <p>How can we help you today?</p>
+        </div>
+        <div class="wa-quick-btns">
+          <button onclick="sendWA('I want to book a room at Shanvi Landmark Panna')">🛏️ Book a Room</button>
+          <button onclick="sendWA('I need help planning a safari near Shanvi Landmark Panna')">🐯 Safari Booking</button>
+          <button onclick="sendWA('I want to enquire about wedding or banquet at Shanvi Landmark')">💍 Wedding / Events</button>
+          <button onclick="sendWA('What are the room rates at Shanvi Landmark Panna?')">💰 Ask Room Rates</button>
+          <button onclick="sendWA('I need directions to Hotel Shanvi Landmark Panna')">📍 Get Directions</button>
+        </div>
+      </div>
+      <div class="wa-chat-footer">
+        <a href="https://wa.me/919859858383" class="wa-open-btn" target="_blank" rel="noopener">Open WhatsApp</a>
+      </div>
+    </div>
+    <button class="wa-fab" onclick="toggleChat()" id="waFab" aria-label="WhatsApp Chat">
+      <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.66 4.73 1.8 6.71L2 30l7.5-1.77A13.93 13.93 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm7.21 19.27c-.3.84-1.76 1.6-2.41 1.7-.64.1-1.44.14-2.32-.14-.54-.17-1.23-.4-2.11-.78-3.72-1.6-6.15-5.35-6.33-5.6-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45s.48.01.69.02c.22.01.52-.08.81.62.3.72 1.02 2.49 1.11 2.67.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.53 2 2.48 1.37 1.22 2.53 1.6 2.89 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72z"/>
+      </svg>
+      <span class="wa-pulse"></span>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  
+  
+<script>
+function toggleChat() {
+  const chatBox = document.getElementById('waChatBox');
+  const waFab = document.getElementById('waFab');
+  if (chatBox.style.display === 'block') {
+    chatBox.style.display = 'none';
+    waFab.style.display = 'block';
+  } else {
+    chatBox.style.display = 'block';
+    waFab.style.display = 'none';
+  }
+}
+</script>
+</body>
+</html>
