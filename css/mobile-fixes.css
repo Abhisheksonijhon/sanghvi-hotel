@@ -8,7 +8,7 @@
 */
 
 /* Prevent horizontal overflow */
-html, body { overflow-x: hidden; }
+html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
 
 /* Body scroll lock helper */
 .body-lock {
@@ -32,7 +32,7 @@ html, body { overflow-x: hidden; }
 
 /* Mobile hero adjustments */
 @media (max-width: 480px) {
-  .hero { min-height: 60vh; padding-top: 56px; }
+  .hero { min-height: 60vh; padding-top: 56px; width: 100vw; left: 0; }
   .hero-title { font-size: 2.0rem; line-height: 1.05; }
   .hero-desc { font-size: 0.95rem; }
   .slide-dots { right: 18px; bottom: 18px; }
@@ -40,6 +40,8 @@ html, body { overflow-x: hidden; }
   .nav-inner { min-height: 64px; }
   .nav-links { display: none !important; }
   .hamburger { display: flex !important; }
+  .container { width: 100% !important; padding-left: 16px; padding-right: 16px; }
+  header.navbar, main, footer { max-width: 100vw; }
 }
 
 @media (max-width: 360px) {
@@ -47,6 +49,25 @@ html, body { overflow-x: hidden; }
   .hero-desc { font-size: 0.9rem; }
 }
 
+/* Force top-level layout containers to not exceed viewport */
+header, main, footer, .container, .hero, .gallery-masonry, .rooms-grid { max-width: 100vw; box-sizing: border-box; }
+
+/* Hide any unexpected large fixed-width nav/menu on small screens */
+@media (max-width: 900px) {
+  .nav-links { display: none !important; }
+  .mobile-menu { display: none; }
+}
+
+/* Ensure images and slides do not cause overflow */
+.slide, .hero-slides, .hero-overlay, .slide-dots { left: 0; right: 0; width: 100vw; }
+img { max-width: 100%; height: auto; }
+
 @media (prefers-reduced-motion: reduce) {
   .slide, .hero-overlay, .hero-badges, .slide-dots { animation: none !important; transition: none !important; }
 }
+
+/* Diagnostic helper - remove once verified. If you still see overflow, add the class 'show-overflow-debug' to body to outline wide elements */
+.show-overflow-debug * {
+  outline: none !important;
+}
+.show-overflow-debug .overflow-highlight { outline: 3px solid rgba(255,0,0,0.85) !important; }
