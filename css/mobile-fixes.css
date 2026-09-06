@@ -7,6 +7,9 @@
    - WhatsApp FAB safe-area adjustments
 */
 
+/* Prevent horizontal overflow */
+html, body { overflow-x: hidden; }
+
 /* Body scroll lock helper */
 .body-lock {
   overflow: hidden !important;
@@ -35,6 +38,8 @@
   .slide-dots { right: 18px; bottom: 18px; }
   .hero-eyebrow { letter-spacing: 3px; }
   .nav-inner { min-height: 64px; }
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
 }
 
 @media (max-width: 360px) {
