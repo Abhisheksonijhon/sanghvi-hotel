@@ -1,0 +1,47 @@
+/* Mobile & small-screen fixes added on 2026-09-06
+   - Improve mobile menu toggling and aria attributes
+   - Prevent body scroll when mobile menu or lightbox is open
+   - Hero size and typography adjustments for small viewports
+   - Lightbox uses data-full, locks body scroll while open
+   - Add fallback link for embedded map when iframe doesn't render
+   - WhatsApp FAB safe-area adjustments
+*/
+
+/* Body scroll lock helper */
+.body-lock {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+}
+
+/* Map responsive already in responsive.css; add fallback visibility. */
+.map-fallback {
+  display: none;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Lightbox overlay adjustments */
+.lb-open { overflow: hidden; }
+
+/* WhatsApp FAB adjustments */
+.wa-fab { bottom: calc(14px + env(safe-area-inset-bottom)); right: 14px; }
+
+/* Mobile hero adjustments */
+@media (max-width: 480px) {
+  .hero { min-height: 60vh; padding-top: 56px; }
+  .hero-title { font-size: 2.0rem; line-height: 1.05; }
+  .hero-desc { font-size: 0.95rem; }
+  .slide-dots { right: 18px; bottom: 18px; }
+  .hero-eyebrow { letter-spacing: 3px; }
+  .nav-inner { min-height: 64px; }
+}
+
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.8rem; }
+  .hero-desc { font-size: 0.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide, .hero-overlay, .hero-badges, .slide-dots { animation: none !important; transition: none !important; }
+}
