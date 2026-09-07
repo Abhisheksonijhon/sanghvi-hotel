@@ -323,13 +323,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ─── HERO ─── */
 .hero {
-  min-height: 100vh;
+  min-height: 92vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
+}
+
+@media (min-width: 1400px) {
+  .hero { min-height: 88vh; max-height: 900px; }
 }
 
 .hero-slides, .slide {
