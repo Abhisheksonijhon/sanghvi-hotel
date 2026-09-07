@@ -1,0 +1,45 @@
+/* ═══ ANIMATIONS ═══ */
+
+/* Reveal Animations */
+.reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+
+.reveal-up.visible, .reveal-left.visible, .reveal-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Delay Classes */
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
+.delay-4 { transition-delay: 0.48s; }
+
+/* Hero Specific */
+.hero-eyebrow { animation: fadeInUp 0.8s 0.3s both; }
+.hero-title    { animation: fadeInUp 0.9s 0.5s both; }
+.hero-desc     { animation: fadeInUp 0.9s 0.65s both; }
+.hero-actions  { animation: fadeInUp 0.9s 0.8s both; }
+.hero-badges   { animation: fadeInUp 0.9s 0.95s both; }
+.hero-scroll   { animation: fadeIn 1s 1.4s both; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Gold shimmer for headings */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
