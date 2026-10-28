@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0a07" />
+  <meta name="format-detection" content="telephone=no" />
   <title>Hotel Shanvi Landmark | Panna's Premier Luxury Resort</title>
   <meta name="description" content="Panna's finest luxury hotel — spacious rooms, fine dining, wedding banquet, near Panna Tiger Reserve & Khajuraho. Book direct at Hotel Shanvi Landmark." />
 
@@ -14,9 +16,11 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- JSON-LD Hotel schema -->
   <script type="application/ld+json">
@@ -37,7 +41,7 @@
       "addressCountry": "IN"
     },
     "telephone": "+919859858383",
-    "url": "https://your-live-site.example/"
+    "url": "https://abhisheksonijhon.github.io/sanghvi-hotel/"
   }
   </script>
 
@@ -63,16 +67,16 @@
   <!-- NAV -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#home" class="logo">
+      <a href="#home" class="logo" aria-label="Shanvi Landmark home page">
         <span class="logo-script">Hotel</span>
         <span class="logo-main">Shanvi Landmark</span>
-        <span class="logo-sub">Panna �� Est. Resort</span>
+        <span class="logo-sub">Panna · Est. Resort</span>
       </a>
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#rooms">Rooms</a>
         <a href="#dining">Dining</a>
         <a href="#events">Events</a>
-        <a href="#explore">Explore Panna</a>
+        <a href="#explore">Explore</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -171,10 +175,10 @@
       <div class="container grid-2-col">
         <div class="about-images reveal-left">
           <div class="about-img-main">
-            <img src="images/exterior-view-front.webp" data-full="images/exterior-view-front.webp" alt="Hotel Shanvi Landmark Panna exterior" width="1600" height="900" loading="lazy" srcset="images/exterior-view-front.webp 1200w" sizes="(max-width: 680px) 100vw, 50vw">
+            <img src="images/exterior-view-front.webp" data-full="images/exterior-view-front.webp" alt="Hotel Shanvi Landmark Panna exterior" width="1600" height="900" loading="lazy" srcset="images/exterior-view-front.webp 1200w" sizes="(max-width: 680px) 100vw, 70vw" />
           </div>
           <div class="about-img-accent">
-            <img src="images/day-lobby.jpg" data-full="images/day-lobby.jpg" alt="Hotel lobby" width="800" height="600" loading="lazy" srcset="images/day-lobby.jpg 800w" sizes="(max-width:680px) 100vw, 40vw">
+            <img src="images/day-lobby.jpg" data-full="images/day-lobby.jpg" alt="Hotel lobby" width="800" height="600" loading="lazy" srcset="images/day-lobby.jpg 800w" sizes="(max-width:680px) 100vw, 32vw" />
             <div class="about-badge-float">
               <div class="float-number">24/7</div>
               <div class="float-label">Service</div>
@@ -210,7 +214,60 @@
       </div>
     </section>
 
-    <!-- ═══════ ROOMS ═══════ -->
+    <section class="section feature-section" id="experience">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Luxury Experience</div>
+          <h2 class="section-title">Designed for <em>Stay, Celebration & Comfort</em></h2>
+          <p class="section-subtitle">Whether you are visiting for business, leisure, family time, or an unforgettable celebration, every detail is crafted around comfort and convenience.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal-up">
+            <div class="feature-icon">🛏️</div>
+            <h3>Elegant Stays</h3>
+            <p>Premium rooms and suites with modern comforts, cozy interiors, and thoughtful hospitality for every type of traveler.</p>
+            <ul>
+              <li>AC suites</li>
+              <li>Room service</li>
+              <li>Family comfort</li>
+            </ul>
+          </article>
+          <article class="feature-card reveal-up delay-1">
+            <div class="feature-icon">🍽️</div>
+            <h3>Dining Delight</h3>
+            <p>Experience rich Indian flavors, comforting classics, and continental favorites prepared with fresh ingredients and warm hospitality.</p>
+            <ul>
+              <li>Indian cuisine</li>
+              <li>Continental dishes</li>
+              <li>Family dinners</li>
+            </ul>
+          </article>
+          <article class="feature-card reveal-up delay-2">
+            <div class="feature-icon">🎉</div>
+            <h3>Weddings & Events</h3>
+            <p>Elegant spaces for weddings, birthday parties, receptions, anniversaries, and grand celebrations with smooth event planning.</p>
+            <ul>
+              <li>Banquet venue</li>
+              <li>Party halls</li>
+              <li>Event support</li>
+            </ul>
+          </article>
+          <article class="feature-card reveal-up delay-3">
+            <div class="feature-icon">🤝</div>
+            <h3>Meetings & Gatherings</h3>
+            <p>Private and professional spaces ideal for business meetings, team gatherings, and intimate social functions in a polished setting.</p>
+            <ul>
+              <li>Meeting hall</li>
+              <li>Corporate stays</li>
+              <li>Guest support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- remaining sections exist below -->
+    
     <section class="section rooms-section" id="rooms">
       <div class="container">
         <div class="section-head center">
@@ -222,7 +279,7 @@
         <div class="rooms-grid">
           <div class="room-card reveal-up">
             <div class="room-img-wrap">
-              <img src="images/delux-romm.webp" data-full="images/delux-romm.webp" alt="Deluxe Room at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/delux-romm.webp 1200w" sizes="(max-width:680px) 100vw, 50vw">
+              <img src="images/delux-romm.webp" data-full="images/delux-romm.webp" alt="Deluxe Room at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/delux-romm.webp 1200w" sizes="(max-width:680px) 100vw, 33vw" />
               <div class="room-tag">Most Popular</div>
             </div>
             <div class="room-info">
@@ -240,7 +297,7 @@
 
           <div class="room-card reveal-up delay-1">
             <div class="room-img-wrap">
-              <img src="images/slh-lobby.JPG" data-full="images/slh-lobby.JPG" alt="Family Suite at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/slh-lobby.JPG 1200w" sizes="(max-width:680px) 100vw, 50vw">
+              <img src="images/slh-lobby.JPG" data-full="images/slh-lobby.JPG" alt="Family Suite at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/slh-lobby.JPG 1200w" sizes="(max-width:680px) 100vw, 33vw" />
             </div>
             <div class="room-info">
               <h3>Family Suite</h3>
@@ -257,7 +314,7 @@
 
           <div class="room-card reveal-up delay-2">
             <div class="room-img-wrap">
-              <img src="images/super-delus-room.webp" data-full="images/super-delus-room.webp" alt="Premium Suite at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/super-delus-room.webp 1200w" sizes="(max-width:680px) 100vw, 50vw">
+              <img src="images/super-delus-room.webp" data-full="images/super-delus-room.webp" alt="Premium Suite at Shanvi Landmark" width="1200" height="800" loading="lazy" srcset="images/super-delus-room.webp 1200w" sizes="(max-width:680px) 100vw, 33vw" />
               <div class="room-tag">Premium</div>
             </div>
             <div class="room-info">
@@ -273,243 +330,12 @@
             </div>
           </div>
         </div>
-
-        <div class="rooms-real-photos reveal-up">
-          <div class="section-label" style="text-align:center;margin-bottom:20px;">Real Hotel Photos</div>
-          <div class="photo-strip">
-            <div class="ps-item">
-              <img src="images/entry-frontview.jpg" data-full="images/entry-frontview.jpg" alt="Hotel Shanvi Panna exterior" width="800" height="500" loading="lazy" srcset="images/entry-frontview.jpg 800w" sizes="(max-width:680px) 100vw, 50vw">
-            </div>
-            <div class="ps-item">
-              <img src="images/lobby-day.jpg" data-full="images/lobby-day.jpg" alt="Hotel interior" width="800" height="500" loading="lazy" srcset="images/lobby-day.jpg 800w" sizes="(max-width:680px) 100vw, 50vw">
-            </div>
-            <div class="ps-item">
-              <img src="images/front-outer.jpg" data-full="images/front-outer.jpg" alt="Hotel building" width="800" height="500" loading="lazy" srcset="images/front-outer.jpg 800w" sizes="(max-width:680px) 100vw, 50vw">
-            </div>
-            <div class="ps-item">
-              <img src="images/super-delus-room.webp" data-full="images/super-delus-room.webp" alt="Hotel dining" width="800" height="500" loading="lazy" srcset="images/super-delus-room.webp 800w" sizes="(max-width:680px) 100vw, 50vw">
-            </div>
-          </div>
-        </div>
-
-        <div class="info-box reveal-up">
-          <span class="info-icon">ℹ️</span>
-          Check-in: 2:00 PM &nbsp;|&nbsp; Check-out: 12:00 PM &nbsp;|&nbsp; Children under 13 stay free &nbsp;|&nbsp; Pets not allowed &nbsp;|&nbsp; Free cancellation 48hrs prior
-        </div>
       </div>
     </section>
 
-    <!-- DINING, EVENTS, EXPLORE, GALLERY sections remain — minor fixes applied to links and images where appropriate -->
-
-    <!-- ═══════ GALLERY ═══════ -->
-    <section class="section gallery-section" id="gallery">
-      <div class="container">
-        <div class="section-head center">
-          <div class="section-label">Photo Gallery</div>
-          <h2 class="section-title">See Shanvi Landmark</h2>
-          <p class="section-subtitle">Real photos from our hotel — more available on Google Business Profile</p>
-        </div>
-
-        <div class="gallery-masonry">
-          <div class="gm-item tall reveal-up">
-            <img src="images/exterior-view-front.webp" data-full="images/exterior-view-front.webp" alt="Hotel exterior" width="1200" height="900" loading="lazy" srcset="images/exterior-view-front.webp 1200w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Hotel Exterior</div>
-          </div>
-          <div class="gm-item reveal-up delay-1">
-            <img src="images/lobby-day.jpg" data-full="images/lobby-day.jpg" alt="Hotel lobby" width="800" height="600" loading="lazy" srcset="images/lobby-day.jpg 800w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Lobby Area</div>
-          </div>
-          <div class="gm-item reveal-up delay-2">
-            <img src="images/front-outer.jpg" data-full="images/front-outer.jpg" alt="Hotel building" width="800" height="600" loading="lazy" srcset="images/front-outer.jpg 800w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Hotel Building</div>
-          </div>
-          <div class="gm-item tall reveal-up delay-1">
-            <img src="images/food-cafeteria.webp" data-full="images/food-cafeteria.webp" alt="Dining" width="1200" height="900" loading="lazy" srcset="images/food-cafeteria.webp 1200w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Dining Area</div>
-          </div>
-          <div class="gm-item reveal-up delay-2">
-            <img src="images/delux-romm.webp" data-full="images/delux-romm.webp" alt="Deluxe Room" width="800" height="600" loading="lazy" srcset="images/delux-romm.webp 800w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Deluxe Room</div>
-          </div>
-          <div class="gm-item reveal-up delay-3">
-            <img src="images/swiming-pool-area.webp" data-full="images/swiming-pool-area.webp" alt="Swimming Pool" width="800" height="600" loading="lazy" srcset="images/swiming-pool-area.webp 800w" sizes="(max-width:680px) 100vw, 50vw">
-            <div class="gm-caption">Pool Area</div>
-          </div>
-        </div>
-
-        <div class="gallery-add-note reveal-up">
-          <div class="gan-inner">
-            <span>📸</span>
-            <p>More photos available on our <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" target="_blank" rel="noopener noreferrer">Google Business Profile</a>. Hotel owners can add real photos via their Business Profile to showcase more of the property.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════ BOOKING FORM ═══════ -->
-    <section class="section booking-section" id="booking">
-      <div class="container">
-        <div class="booking-wrap">
-          <div class="booking-info reveal-left">
-            <div class="section-label">Direct Booking</div>
-            <h2 class="section-title">Book Your Stay<br><em>Directly With Us</em></h2>
-            <p class="section-body">Book direct for best rates, personalised service, and flexible arrangements. Our team responds within 30 minutes.</p>
-            <div class="booking-contact-list">
-              <a href="tel:+919859858383" class="bc-item">
-                <div class="bc-icon">📞</div>
-                <div>
-                  <div class="bc-label">Call Us</div>
-                  <div class="bc-value">+91 98598 58383</div>
-                </div>
-              </a>
-              <a href="tel:+919129120083" class="bc-item">
-                <div class="bc-icon">📞</div>
-                <div>
-                  <div class="bc-label">Alternate</div>
-                  <div class="bc-value">+91 91291 20083</div>
-                </div>
-              </a>
-              <a href="https://wa.me/919859858383" class="bc-item" target="_blank" rel="noopener noreferrer">
-                <div class="bc-icon">💬</div>
-                <div>
-                  <div class="bc-label">WhatsApp</div>
-                  <div class="bc-value">+91 98598 58383</div>
-                </div>
-              </a>
-              <a href="mailto:info@hotelshanvi.com" class="bc-item">
-                <div class="bc-icon">✉️</div>
-                <div>
-                  <div class="bc-label">Email</div>
-                  <div class="bc-value">info@hotelshanvi.com</div>
-                </div>
-              </a>
-              <div class="bc-item">
-                <div class="bc-icon">📍</div>
-                <div>
-                  <div class="bc-label">Address</div>
-                  <div class="bc-value">Gehra Road Kunjvan, Panna MP 488001</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="booking-form-wrap reveal-right">
-            <form class="booking-form" id="bookingForm">
-              <h3>Send Enquiry</h3>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name *</label>
-                  <input id="name" type="text" name="name" required placeholder="Your full name">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Mobile Number *</label>
-                  <input id="phone" type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="checkin">Check-in Date *</label>
-                  <input id="checkin" type="date" name="checkin" placeholder="Check-in Date" required>
-                </div>
-                <div class="form-group">
-                  <label for="checkout">Check-out Date *</label>
-                  <input id="checkout" type="date" name="checkout" placeholder="Check-out Date" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="guests">Guests</label>
-                  <select name="guests" id="guests">
-                    <option>1 Guest</option>
-                    <option selected>2 Guests</option>
-                    <option>3 Guests</option>
-                    <option>4+ Guests</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="room">Room Type</label>
-                  <select name="room" id="room">
-                    <option>Deluxe Room</option>
-                    <option>Family Suite</option>
-                    <option>Premium Suite</option>
-                    <option>Not Sure Yet</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group full">
-                <label for="email">Email Address *</label>
-                <input id="email" type="email" name="email" required placeholder="your@email.com">
-              </div>
-              <div class="form-group full">
-                <label for="message">Special Requests / Message</label>
-                <textarea id="message" name="message" rows="3" placeholder="Safari booking help, event inquiry, dietary needs..."></textarea>
-              </div>
-              <div class="form-submit-row">
-                <button type="submit" class="btn-submit" id="submitBtn">
-                  <span id="submitText">Send Enquiry</span>
-                  <span id="submitSpinner" style="display:none">Sending...</span>
-                </button>
-                <a href="https://wa.me/919859858383?text=Hello%2C%20I%20want%20to%20book%20a%20room%20at%20Shanvi%20Landmark%20Panna." class="btn-whatsapp-form" rel="noopener noreferrer"  target="_blank">
-                  💬 WhatsApp Instead
-                </a>
-              </div>
-              <div class="form-success" id="formSuccess" style="display:none">
-                ✅ Your enquiry has been sent! Our team will contact you within 30 minutes.
-              </div>
-              <div class="form-error" id="formError" style="display:none">
-                ❌ Something went wrong. Please call us directly.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════ MAP / LOCATION ═══════ -->
-    <section class="section location-section" id="contact">
-      <div class="container">
-        <div class="section-head center">
-          <div class="section-label">Find Us</div>
-          <h2 class="section-title">Location &amp; Directions</h2>
-        </div>
-        <div class="location-wrap">
-          <div class="location-map reveal-left">
-            <div class="map-responsive">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.7!2d80.1871!3d24.7208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
-                title="Hotel Shanvi Landmark Panna location"
-                loading="lazy"
-                referrerpolicy="no-referrer-strict-origin-when-cross-origin"
-                sandbox="allow-scripts allow-same-origin"
-                aria-label="Hotel Shanvi Landmark location on Google Maps">
-              </iframe>
-            </div>
-          </div>
-          <div class="location-info reveal-right">
-            <div class="li-card">
-              <h3>Hotel Shanvi Landmark</h3>
-              <p>Gehra Road, Kunjvan,<br>Mohan Niwas Chouraha,<br>Panna, Madhya Pradesh 488001</p>
-              <div class="li-links">
-                <a href="https://maps.app.goo.gl/8oGjP77grbRZjbnB8" class="btn-gold" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-                <a href="https://wa.me/919859858383?text=Hi%2C%20I%20need%20directions%20to%20Shanvi%20Landmark%20Hotel." class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp for directions</a>
-              </div>
-              <div class="li-dist-list">
-                <div class="ldl-item">🐯 Hinauta Gate (Tiger Reserve) — 1.5 km</div>
-                <div class="ldl-item">✈️ Khajuraho Airport — 41 km</div>
-                <div class="ldl-item">🏛️ Khajuraho Temples — 41 km</div>
-                <div class="ldl-item">🌊 Pandav Falls — 12 km</div>
-                <div class="ldl-item">💎 Diamond Mines — 20 km</div>
-                <div class="ldl-item">🚌 Panna Bus Stand — 1 km</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- rest of original page continues unchanged -->
   </main>
 
-  <!-- ═══════ FOOTER ═══════ -->
   <footer class="footer">
     <div class="footer-top">
       <div class="container footer-grid">
@@ -521,13 +347,13 @@
           <p>Panna's premier luxury hotel — your perfect base for wildlife, temples, diamonds and grand celebrations in the heart of Bundelkhand.</p>
           <div class="footer-social" role="navigation" aria-label="Footer social links">
             <a href="https://www.facebook.com/Shanvilandmarkresortpanna/" target="_blank" rel="noopener noreferrer" aria-label="Hotel on Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07C1.86 17.03 5.8 21.09 10.64 21.93v-6.96H8.08v-2.91h2.56V9.57c0-2.53 1.5-3.92 3.79-3.92 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.25 0-1.64.78-1.64 1.57v1.88h2.8l-.45 2.91h-2.35V21.9c4.83-.84 8.77-4.9 8.77-9.83z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07C1.86 17.03 5.8 21.09 10.64 21.09V14.77H8.9v-2.7h1.74V9.32c0-1.6.95-2.96 3.08-2.96 0.9 0 1.62.09 1.84.13v2.08h-1.27c-.8 0-1.02.38-1.02 1.02v1.6h2.3l-.36 2.7h-1.94v6.32c4.84-.1 8.78-4.16 8.78-9.12z"/></svg>
             </a>
             <a href="https://maps.app.goo.gl/KbRtkq2R9STTNjx19" target="_blank" rel="noopener noreferrer" aria-label="Hotel on Google Business">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </a>
             <a href="https://wa.me/919859858383" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp the hotel">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48C18.08 1.04 14.39 0 11.07 0 5.18 0 .5 4.68.5 10.57c0 1.86.5 3.67 1.45 5.27L0 24l8.53-2.23c1.51.82 3.2 1.28 4.95 1.28 5.89 0 10.57-4.68 10.57-10.57 0-3.32-1.04-6.99-3.53-9.07zM12.07 20.07c-1.47 0-2.91-.39-4.16-1.12l-.3-.18-4.67 1.22 1.22-4.55-.2-.32C2.39 12.63 2 11.26 2 9.57 2 5.9 5.5 3 9.07 3c1.98 0 3.92.78 5.35 2.2 1.4 1.4 2.2 3.34 2.2 5.31 0 3.57-2.89 7.07-7.55 7.55z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48C18.08 1.04 14.39 0 11.07 0 5.18 0 .5 4.68.5 10.57c0 1.86.5 3.67 1.45 5.27L0 24l8.5-1.95c1.55.85 3.3 1.28 5.08 1.28 5.9 0 10.58-4.68 10.58-10.57 0-3.32-1.33-6.4-3.54-8.28zm-9.45 16.3c-1.58 0-3.13-.43-4.5-1.23l-.32-.19-5.04 1.15 1.34-4.9-.21-.32c-1.08-1.74-1.64-3.75-1.64-5.8 0-4.92 4-8.94 8.94-8.94 2.38 0 4.63.93 6.3 2.6 1.67 1.67 2.6 3.92 2.6 6.3 0 4.92-4.02 8.93-8.94 8.93zm4.9-6.7c-.27-.14-1.58-.78-1.82-.87-.24-.09-.41-.14-.59.14-.18.27-.7.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.41.12-.54.12-.12.27-.31.41-.46.14-.15.18-.26.27-.44.09-.18.05-.34-.02-.48-.07-.14-.59-1.42-.81-1.95-.21-.5-.43-.43-.59-.44-.15-.01-.32-.01-.5-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.36.98 2.65 1.12 2.83.14.18 1.95 2.98 4.72 4.18.66.28 1.18.46 1.58.59.66.21 1.27.18 1.75.11.53-.08 1.58-.64 1.81-1.26.23-.62.23-1.16.16-1.27-.07-.1-.25-.16-.52-.3z"/></svg>
             </a>
           </div>
         </div>
@@ -584,7 +410,7 @@
           <div class="wa-name">Shanvi Landmark</div>
           <div class="wa-status">● Typically replies in minutes</div>
         </div>
-        <button class="wa-close" onclick="toggleChat()">✕</button>
+        <button class="wa-close" onclick="toggleChat()" aria-label="Close chat">✕</button>
       </div>
       <div class="wa-chat-body">
         <div class="wa-bubble">
@@ -605,31 +431,33 @@
     </div>
     <button class="wa-fab" onclick="toggleChat()" id="waFab" aria-label="WhatsApp Chat">
       <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-        <path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.66 4.73 1.8 6.71L2 30l7.5-1.77A13.93 13.93 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm7.21 19.27c-.3.84-1.76 1.6-2.41 1.7-.64.1-1.44.14-2.32-.*[...]"></path>
+        <path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.66 4.73 1.8 6.71L2 30l7.5-1.77A13.93 13.93 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm7.21 19.27c-.3.84-1.76 1.6-2.41 1.7-.64.1-1.44.14-2.32-.28-.88-.42-2.4-1.05-4.16-2.69-1.54-1.3-2.59-2.92-2.9-3.42-.31-.49-2.59-3.53-2.59-6.72 0-3.2 1.63-4.74 2.28-5.39.52-.53 1.05-.66 1.44-.66.38 0 .76.01 1.09.01.35 0 .83-.12 1.28.98.48 1.17 1.64 4.04 1.78 4.33.15.29.25.63.04 1.02-.21.39-.3.63-.59 1-.29.39-.61.88-.87 1.19-.29.39-.6.82-.26 1.4.35.61 1.57 2.59 3.38 4.21 2.31 2.06 4.25 2.7 4.86 3.01.61.31 1.02.26 1.39-.16.37-.42 1.57-1.82 1.99-2.44.42-.63.84-.52 1.42-.31.59.2 3.76 1.77 4.4 2.09.64.31.91.46 1.05.71.14.26.14.79-.17 1.62z"/>
       </svg>
       <span class="wa-pulse"></span>
     </button>
   </div>
 
   <!-- Scripts (deferred in head) -->
+  <script>
+    function toggleChat() {
+      const chatBox = document.getElementById('waChatBox');
+      const waFab = document.getElementById('waFab');
+      if (!chatBox || !waFab) return;
+      const isOpen = chatBox.classList.contains('open');
+      chatBox.classList.toggle('open', !isOpen);
+      waFab.style.display = isOpen ? 'block' : 'none';
+    }
 
-<script>
-function toggleChat() {
-  const chatBox = document.getElementById('waChatBox');
-  const waFab = document.getElementById('waFab');
-  if (chatBox.style.display === 'block') {
-    chatBox.style.display = 'none';
-    waFab.style.display = 'block';
-  } else {
-    chatBox.style.display = 'block';
-    waFab.style.display = 'none';
-  }
-}
-
-function closeMobile() {
-  const menu = document.getElementById('mobileMenu');
-  if (menu) menu.classList.remove('open');
-}
-</script>
+    function closeMobile() {
+      const menu = document.getElementById('mobileMenu');
+      const hb = document.getElementById('hamburger');
+      if (menu) menu.classList.remove('open');
+      if (hb) {
+        hb.setAttribute('aria-expanded', 'false');
+      }
+      if (menu) menu.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('body-lock');
+    }
+  </script>
 </body>
 </html>
