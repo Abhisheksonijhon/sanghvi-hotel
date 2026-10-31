@@ -1,166 +1,211 @@
 /* ═══════════════════════════
    HOTEL SHANVI — MAIN JS
-   Improvements: safer DOM access, mobile menu aria toggles, hero slider guards,
-   close mobile menu on anchor click, and small robustness fixes for mobile/iOS.
+   Performance-safe version: throttled scroll handling, reduced motion support,
+   paused hero slider when hidden, body lock for overlays, and safer DOM checks.
    ═══════════════════════════ */
 
-// ─── PRELOADER ───
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const navbar = document.getElementById('navbar');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dots = Array.from(document.querySelectorAll('.dot'));
+const revealEls = Array.from(document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right'));
+const sections = Array.from(document.querySelectorAll('section[id]'));
+const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    const pl = document.getElementById('preloader');
-    if (pl) pl.classList.add('done');
-  }, 1200);
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  const delay = prefersReducedMotion ? 200 : 1200;
+  setTimeout(() => preloader.classList.add('done'), delay);
 });
 
-// ─── NAVBAR SCROLL ───
-const navbar = document.getElementById('navbar');
-if (navbar) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+let scrollTick = false;
+
+function updateScrollState() {
+  if (!navbar) return;
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+
+  if (!sections.length || !navLinks.length) return;
+
+  let current = '';
+  sections.forEach((section) => {
+    const top = section.offsetTop - 140;
+    if (window.scrollY >= top) current = section.getAttribute('id');
+  });
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    link.classList.toggle('active-link', href === `#${current}`);
   });
 }
 
-// ─── MOBILE MENU ───
+window.addEventListener(
+  'scroll',
+  () => {
+    if (scrollTick) return;
+    scrollTick = true;
+
+    requestAnimationFrame(() => {
+      updateScrollState();
+      scrollTick = false;
+    });
+  },
+  { passive: true }
+);
+
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+
+function setMobileMenu(open) {
+  if (!mobileMenu || !hamburger) return;
+
+  hamburger.setAttribute('aria-expanded', String(open));
+  mobileMenu.classList.toggle('open', open);
+  mobileMenu.setAttribute('aria-hidden', String(!open));
+  document.body.classList.toggle('body-lock', open);
+}
+
 if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
     const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', String(!expanded));
-    mobileMenu.classList.toggle('open');
-    mobileMenu.setAttribute('aria-hidden', String(expanded));
+    setMobileMenu(!expanded);
   });
 }
 
 function closeMobile() {
-  const menu = document.getElementById('mobileMenu');
-  const hb = document.getElementById('hamburger');
-  if (menu) menu.classList.remove('open');
-  if (hb) hb.setAttribute('aria-expanded', 'false');
-  if (menu) menu.setAttribute('aria-hidden', 'true');
+  setMobileMenu(false);
 }
 
-// ─── HERO SLIDER ───
 let slideIndex = 0;
-const slides = document.querySelectorAll('.slide') || [];
-const dots = document.querySelectorAll('.dot') || [];
+let slideTimer = null;
 
-function goSlide(idx) {
+function goSlide(index) {
   if (!slides.length || !dots.length) return;
-  slides[slideIndex].classList.remove('active');
-  dots[slideIndex].classList.remove('active');
-  slideIndex = idx % slides.length;
+
+  slides[slideIndex]?.classList.remove('active');
+  dots[slideIndex]?.classList.remove('active');
+
+  slideIndex = (index + slides.length) % slides.length;
   slides[slideIndex].classList.add('active');
   dots[slideIndex].classList.add('active');
 }
 
 function nextSlide() {
   if (!slides.length) return;
-  const next = (slideIndex + 1) % slides.length;
-  goSlide(next);
+  goSlide(slideIndex + 1);
 }
 
-let slideTimer = slides.length ? setInterval(nextSlide, 5000) : null;
+function stopSlideLoop() {
+  if (slideTimer) {
+    clearInterval(slideTimer);
+    slideTimer = null;
+  }
+}
 
-// Reset timer on manual click
-if (dots && dots.length) {
-  dots.forEach((dot, i) => {
+function startSlideLoop() {
+  if (!slides.length || prefersReducedMotion) return;
+  stopSlideLoop();
+  slideTimer = setInterval(nextSlide, 5000);
+}
+
+if (slides.length && dots.length) {
+  dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      if (slideTimer) clearInterval(slideTimer);
-      goSlide(i);
-      slideTimer = setInterval(nextSlide, 5000);
+      stopSlideLoop();
+      goSlide(index);
+      startSlideLoop();
     });
   });
+
+  startSlideLoop();
 }
 
-// ─── SCROLL REVEAL ───
-const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
-if (revealEls && revealEls.length) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopSlideLoop();
+  } else if (!prefersReducedMotion) {
+    startSlideLoop();
+  }
+});
 
-  revealEls.forEach(el => revealObserver.observe(el));
+if (revealEls.length) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
 }
 
-// ─── WHATSAPP WIDGET ───
-const waChatBox = document.getElementById('waChatBox');
 function toggleChat() {
   const box = document.getElementById('waChatBox');
   const fab = document.getElementById('waFab');
   if (!box || !fab) return;
-  if (box.classList.contains('open')) {
-    box.classList.remove('open');
-    fab.style.display = 'block';
-  } else {
-    box.classList.add('open');
-    fab.style.display = 'none';
-  }
+
+  const isOpen = box.classList.contains('open');
+  box.classList.toggle('open', !isOpen);
+  fab.style.display = isOpen ? 'block' : 'none';
 }
 
 function sendWA(msg) {
   const url = `https://wa.me/919859858383?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
-// ─── SMOOTH ANCHOR SCROLL — close mobile when clicking
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const href = anchor.getAttribute('href');
     if (!href || href === '#') return;
+
     const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      closeMobile();
-      const offset = 84;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+    if (!target) return;
+
+    event.preventDefault();
+    closeMobile();
+
+    const offset = 84;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   });
 });
 
-// ─── GALLERY LIGHTBOX (Simple) — guard
-document.querySelectorAll('.gm-item img').forEach(img => {
+document.querySelectorAll('.gm-item img').forEach((img) => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', () => {
     const overlay = document.createElement('div');
     overlay.style.cssText = `
-      position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0.9);
-      display:flex;align-items:center;justify-content:center;cursor:zoom-out;
-      animation: fadeIn 0.3s ease;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+      animation: fadeIn 0.25s ease;
     `;
+
     const bigImg = document.createElement('img');
     bigImg.src = img.getAttribute('data-full') || img.src;
-    bigImg.style.cssText = `max-width:90vw;max-height:88vh;border-radius:8px;object-fit:contain;`;
+    bigImg.style.cssText = 'max-width:90vw;max-height:88vh;border-radius:8px;object-fit:contain;';
+
     overlay.appendChild(bigImg);
-    overlay.addEventListener('click', () => overlay.remove());
+    overlay.addEventListener('click', () => {
+      overlay.remove();
+      document.body.classList.remove('body-lock');
+    });
+
+    document.body.classList.add('body-lock');
     document.body.appendChild(overlay);
   });
 });
-
-// ─── Active nav link on scroll — light weight
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-if (sections.length && navLinks.length) {
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sTop = section.offsetTop - 140;
-      if (window.scrollY >= sTop) current = section.getAttribute('id');
-    });
-    navLinks.forEach(a => {
-      a.classList.remove('active-link');
-      if (a.getAttribute('href') === `#${current}`) {
-        a.classList.add('active-link');
-      }
-    });
-  });
-}
