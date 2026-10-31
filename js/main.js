@@ -29,7 +29,6 @@ function updateScrollState() {
   navbar.classList.toggle('scrolled', scrolled);
 
   if (!sections.length || !navLinks.length) return;
-
   let current = '';
   sections.forEach((section) => {
     const top = section.offsetTop - 140;
@@ -42,26 +41,20 @@ function updateScrollState() {
   });
 }
 
-window.addEventListener(
-  'scroll',
-  () => {
-    if (scrollTick) return;
-    scrollTick = true;
-
-    requestAnimationFrame(() => {
-      updateScrollState();
-      scrollTick = false;
-    });
-  },
-  { passive: true }
-);
+window.addEventListener('scroll', () => {
+  if (scrollTick) return;
+  scrollTick = true;
+  requestAnimationFrame(() => {
+    updateScrollState();
+    scrollTick = false;
+  });
+}, { passive: true });
 
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 function setMobileMenu(open) {
   if (!mobileMenu || !hamburger) return;
-
   hamburger.setAttribute('aria-expanded', String(open));
   mobileMenu.classList.toggle('open', open);
   mobileMenu.setAttribute('aria-hidden', String(!open));
@@ -84,10 +77,8 @@ let slideTimer = null;
 
 function goSlide(index) {
   if (!slides.length || !dots.length) return;
-
   slides[slideIndex]?.classList.remove('active');
   dots[slideIndex]?.classList.remove('active');
-
   slideIndex = (index + slides.length) % slides.length;
   slides[slideIndex].classList.add('active');
   dots[slideIndex].classList.add('active');
@@ -119,7 +110,6 @@ if (slides.length && dots.length) {
       startSlideLoop();
     });
   });
-
   startSlideLoop();
 }
 
@@ -132,17 +122,14 @@ document.addEventListener('visibilitychange', () => {
 });
 
 if (revealEls.length) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   revealEls.forEach((el) => revealObserver.observe(el));
 }
@@ -151,7 +138,6 @@ function toggleChat() {
   const box = document.getElementById('waChatBox');
   const fab = document.getElementById('waFab');
   if (!box || !fab) return;
-
   const isOpen = box.classList.contains('open');
   box.classList.toggle('open', !isOpen);
   fab.style.display = isOpen ? 'block' : 'none';
@@ -166,13 +152,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (event) => {
     const href = anchor.getAttribute('href');
     if (!href || href === '#') return;
-
     const target = document.querySelector(href);
     if (!target) return;
-
     event.preventDefault();
     closeMobile();
-
     const offset = 84;
     const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
@@ -194,17 +177,14 @@ document.querySelectorAll('.gm-item img').forEach((img) => {
       cursor: zoom-out;
       animation: fadeIn 0.25s ease;
     `;
-
     const bigImg = document.createElement('img');
     bigImg.src = img.getAttribute('data-full') || img.src;
     bigImg.style.cssText = 'max-width:90vw;max-height:88vh;border-radius:8px;object-fit:contain;';
-
     overlay.appendChild(bigImg);
     overlay.addEventListener('click', () => {
       overlay.remove();
       document.body.classList.remove('body-lock');
     });
-
     document.body.classList.add('body-lock');
     document.body.appendChild(overlay);
   });
