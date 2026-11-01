@@ -204,3 +204,23 @@ document.querySelectorAll('.gm-item img').forEach((img) => {
   }
   const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* Count-up numbers + scroll progress bar */
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nums = document.querySelectorAll('[data-count]');
+  if (nums.length && 'IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target, end = parseFloat(el.dataset.count), dec = +el.dataset.dec || 0, t0 = performance.now();
+        const tick = (t) => { const k = Math.min((t - t0) / 1100, 1); el.textContent = (end * (1 - Math.pow(1 - k, 3))).toFixed(dec); if (k < 1) requestAnimationFrame(tick); };
+        requestAnimationFrame(tick); io.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach((n) => io.observe(n));
+  }
+  const bar = document.createElement('div'); bar.className = 'scroll-progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
+  const upd = () => { const h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%'; };
+  addEventListener('scroll', upd, { passive: true }); upd();
+})();

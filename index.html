@@ -12,10 +12,21 @@
 
   <meta property="og:title" content="Hotel Shanvi Landmark — Panna's Premier Luxury Resort" />
   <meta property="og:description" content="Panna's finest luxury hotel — spacious rooms, fine dining, wedding banquet, near Panna Tiger Reserve & Khajuraho. Book direct at Hotel Shanvi Landmark." />
-  <meta property="og:image" content="https://sanghvi-hotel.vercel.app/images/exterior-view-front.webp" />
+  <meta property="og:image" content="https://sanghvi-hotel.vercel.app/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hotel Shanvi Landmark, Panna" />
+  <meta property="og:site_name" content="Hotel Shanvi Landmark" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Panna" />
   <meta property="og:url" content="https://sanghvi-hotel.vercel.app/" />
   <meta property="og:type" content="hotel" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hotel Shanvi Landmark | Panna's Premier Luxury Resort" />
+  <meta name="twitter:description" content="Rooms, dining and wedding banquet 1.5 km from Panna Tiger Reserve. Book direct." />
+  <meta name="twitter:image" content="https://sanghvi-hotel.vercel.app/images/og-cover.jpg" />
 
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,20 +39,21 @@
     "@context": "https://schema.org",
     "@type": "Hotel",
     "name": "Hotel Shanvi Landmark",
-    "image": [
-      "https://raw.githubusercontent.com/Abhisheksonijhon/sanghvi-hotel/main/images/exterior-view-front.webp",
-      "https://raw.githubusercontent.com/Abhisheksonijhon/sanghvi-hotel/main/images/day-lobby.jpg"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Gehra Road Kunjvan",
-      "addressLocality": "Panna",
-      "addressRegion": "MP",
-      "postalCode": "488001",
-      "addressCountry": "IN"
-    },
-    "telephone": "+919859858383",
-    "url": "https://abhisheksonijhon.github.io/sanghvi-hotel/"
+    "description": "Hotel in Kunjvan, Panna, 1.5 km from the Panna Tiger Reserve Hinauta gate, with rooms, a restaurant, a wedding banquet hall and a garden.",
+    "url": "https://sanghvi-hotel.vercel.app/",
+    "image": ["https://sanghvi-hotel.vercel.app/images/og-cover.jpg"],
+    "telephone": ["+919859858383", "+919129120083"],
+    "email": "info@hotelshanvi.com",
+    "address": {"@type": "PostalAddress", "streetAddress": "Gehra Road, Kunjvan", "addressLocality": "Panna", "addressRegion": "Madhya Pradesh", "postalCode": "488001", "addressCountry": "IN"},
+    "hasMap": "https://maps.app.goo.gl/TbtHTvEXDhfdMLWs7",
+    "sameAs": ["https://www.facebook.com/Shanvilandmarkresortpanna/", "https://maps.app.goo.gl/KbRtkq2R9STTNjx19"],
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Banquet and wedding hall", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Garden and kids play area", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Room service", "value": true}
+    ]
   }
   </script>
 
@@ -75,6 +87,7 @@
         <a href="#experience">Experience</a>
         <a href="#rooms">Rooms</a>
         <a href="#gallery">Gallery</a>
+        <a href="#explore">Explore</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-right">
@@ -89,6 +102,7 @@
       <a href="#experience" onclick="closeMobile()">Experience</a>
       <a href="#rooms" onclick="closeMobile()">Rooms</a>
       <a href="#gallery" onclick="closeMobile()">Gallery</a>
+      <a href="#explore" onclick="closeMobile()">Explore</a>
       <a href="#contact" onclick="closeMobile()">Contact</a>
       <a href="#booking" class="mobile-book" onclick="closeMobile()">Book Now</a>
     </div>
@@ -131,15 +145,12 @@
       </div>
     </section>
 
-    <section class="strip-stats">
-      <div class="strip-inner">
-        <div class="strip-item"><span class="strip-icon">🏆</span><span class="strip-text">Best Maintained Hotel in Panna</span></div>
-        <div class="strip-divider">✦</div>
-        <div class="strip-item"><span class="strip-icon">⭐</span><span class="strip-text">90% Guest Recommendation Rate</span></div>
-        <div class="strip-divider">✦</div>
-        <div class="strip-item"><span class="strip-icon">🌿</span><span class="strip-text">Garden & Kids Play Area</span></div>
-        <div class="strip-divider">✦</div>
-        <div class="strip-item"><span class="strip-icon">🎊</span><span class="strip-text">Premier Wedding & Banquet Venue</span></div>
+    <section class="trust-bar" aria-label="Hotel highlights">
+      <div class="trust-grid">
+        <div class="trust-item reveal-up"><div class="trust-value"><span data-count="4.4" data-dec="1">4.4</span><small>★</small></div><div class="trust-label">Google rating<br>2,189 reviews</div></div>
+        <div class="trust-item reveal-up delay-1"><div class="trust-value"><span data-count="1.5" data-dec="1">1.5</span><small>km</small></div><div class="trust-label">To Panna Tiger<br>Reserve gate</div></div>
+        <div class="trust-item reveal-up delay-2"><div class="trust-value">24<small>/7</small></div><div class="trust-label">Front desk &amp;<br>room service</div></div>
+        <div class="trust-item reveal-up delay-3"><div class="trust-value">Banquet</div><div class="trust-label">Weddings, events<br>&amp; garden lawn</div></div>
       </div>
     </section>
 
@@ -313,6 +324,43 @@
       </div>
     </section>
 
+    <section class="section explore-section" id="explore">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Around the Hotel</div>
+          <h2 class="section-title">Explore Panna</h2>
+          <p class="section-subtitle">Wildlife, waterfalls, temples and diamonds, all within easy reach.</p>
+        </div>
+        <div class="places-row">
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Hinauta+Gate+Panna+Tiger+Reserve" target="_blank" rel="noopener noreferrer" aria-label="Panna Tiger Reserve, 1.5 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">🐯</span><img src="images/places/tiger-reserve.jpg" alt="Panna Tiger Reserve" loading="lazy" onerror="this.remove()" /><span class="place-dist">1.5 km</span></div>
+            <div class="place-body"><h3>Panna Tiger Reserve</h3><p class="place-tag">Hinauta Gate</p><p>Jungle safaris from the park's Hinauta gate.</p><span class="place-cta">Get directions</span></div>
+          </a>
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Pandav+Falls+Panna" target="_blank" rel="noopener noreferrer" aria-label="Pandav Falls, 12 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">🌊</span><img src="images/places/pandav-falls.jpg" alt="Pandav Falls" loading="lazy" onerror="this.remove()" /><span class="place-dist">12 km</span></div>
+            <div class="place-body"><h3>Pandav Falls</h3><p class="place-tag">Waterfall</p><p>Waterfall and natural pools inside the national park.</p><span class="place-cta">Get directions</span></div>
+          </a>
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Majhgawan+Diamond+Mine+Panna" target="_blank" rel="noopener noreferrer" aria-label="Diamond Mines, 20 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">💎</span><img src="images/places/diamond-mines.jpg" alt="Diamond Mines" loading="lazy" onerror="this.remove()" /><span class="place-dist">20 km</span></div>
+            <div class="place-body"><h3>Diamond Mines</h3><p class="place-tag">Panna region</p><p>Visit Panna's famous diamond-mining region.</p><span class="place-cta">Get directions</span></div>
+          </a>
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Khajuraho+Group+of+Monuments" target="_blank" rel="noopener noreferrer" aria-label="Khajuraho Temples, 41 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">🏛️</span><img src="images/places/khajuraho-temples.jpg" alt="Khajuraho Temples" loading="lazy" onerror="this.remove()" /><span class="place-dist">41 km</span></div>
+            <div class="place-body"><h3>Khajuraho Temples</h3><p class="place-tag">UNESCO site</p><p>World Heritage temples known for detailed carvings.</p><span class="place-cta">Get directions</span></div>
+          </a>
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Khajuraho+Airport" target="_blank" rel="noopener noreferrer" aria-label="Khajuraho Airport, 41 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">✈️</span><img src="images/places/khajuraho-airport.jpg" alt="Khajuraho Airport" loading="lazy" onerror="this.remove()" /><span class="place-dist">41 km</span></div>
+            <div class="place-body"><h3>Khajuraho Airport</h3><p class="place-tag">Nearest airport</p><p>The closest airport for guests flying in.</p><span class="place-cta">Get directions</span></div>
+          </a>
+          <a class="place-card" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Shanvi+Landmark+Resort+Panna&amp;destination=Panna+Bus+Stand" target="_blank" rel="noopener noreferrer" aria-label="Panna Bus Stand, 1 km from the hotel. Get directions">
+            <div class="place-media"><span class="place-icon" aria-hidden="true">🚌</span><img src="images/places/bus-stand.jpg" alt="Panna Bus Stand" loading="lazy" onerror="this.remove()" /><span class="place-dist">1 km</span></div>
+            <div class="place-body"><h3>Panna Bus Stand</h3><p class="place-tag">Local transport</p><p>Easy local and intercity connections.</p><span class="place-cta">Get directions</span></div>
+          </a>
+        </div>
+        <p class="places-hint">Swipe to see more →</p>
+      </div>
+    </section>
+
     <section class="section booking-section" id="booking">
       <div class="container">
         <div class="booking-wrap">
@@ -378,14 +426,11 @@
                 <a href="https://maps.app.goo.gl/TbtHTvEXDhfdMLWs7" class="btn-gold" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
                 <a href="https://wa.me/919859858383?text=Hi%2C%20I%20need%20directions%20to%20Shanvi%20Landmark%20Hotel." class="btn-ghost" target="_blank" rel="noopener noreferrer">WhatsApp for Directions</a>
               </div>
-              <div class="li-dist-list">
-                <div class="ldl-item">🐯 Hinauta Gate (Tiger Reserve) — 1.5 km</div>
-                <div class="ldl-item">✈️ Khajuraho Airport — 41 km</div>
-                <div class="ldl-item">🏛️ Khajuraho Temples — 41 km</div>
-                <div class="ldl-item">🌊 Pandav Falls — 12 km</div>
-                <div class="ldl-item">💎 Diamond Mines — 20 km</div>
-                <div class="ldl-item">🚌 Panna Bus Stand — 1 km</div>
-              </div>
+              <ul class="li-meta">
+                <li><a href="tel:+919859858383">+91 98598 58383</a></li>
+                <li><a href="tel:+919129120083">+91 91291 20083</a></li>
+                <li><a href="mailto:info@hotelshanvi.com">info@hotelshanvi.com</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -414,6 +459,7 @@
             <li><a href="#about">About the Hotel</a></li>
             <li><a href="#experience">Dining &amp; Events</a></li>
             <li><a href="#rooms">Rooms &amp; Suites</a></li>
+            <li><a href="#explore">Explore Nearby</a></li>
             <li><a href="#gallery">Photo Gallery</a></li>
             <li><a href="#booking">Book Direct</a></li>
           </ul>
