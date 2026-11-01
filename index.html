@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c0a07%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23c9a84c%27%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
   <meta name="theme-color" content="#0c0a07" />
   <meta name="format-detection" content="telephone=yes, date=no, email=no, address=no" />
   <title>Hotel Shanvi Landmark | Panna's Premier Luxury Resort</title>
   <meta name="description" content="Panna's finest luxury hotel — spacious rooms, fine dining, wedding banquet, near Panna Tiger Reserve & Khajuraho. Book direct at Hotel Shanvi Landmark." />
-  <link rel="canonical" href="https://abhisheksonijhon.github.io/sanghvi-hotel/" />
+  <link rel="canonical" href="https://sanghvi-hotel.vercel.app/" />
 
   <meta property="og:title" content="Hotel Shanvi Landmark — Panna's Premier Luxury Resort" />
   <meta property="og:description" content="Panna's finest luxury hotel — spacious rooms, fine dining, wedding banquet, near Panna Tiger Reserve & Khajuraho. Book direct at Hotel Shanvi Landmark." />
-  <meta property="og:image" content="/images/exterior-view-front.webp" />
-  <meta property="og:url" content="https://abhisheksonijhon.github.io/sanghvi-hotel/" />
+  <meta property="og:image" content="https://sanghvi-hotel.vercel.app/images/exterior-view-front.webp" />
+  <meta property="og:url" content="https://sanghvi-hotel.vercel.app/" />
   <meta property="og:type" content="hotel" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -47,8 +48,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="animations.css">
   <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="mobile-fixes.css">
-  <link rel="stylesheet" href="luxury-enhancements.css">
+    <link rel="stylesheet" href="luxury-enhancements.css">
+  <link rel="stylesheet" href="polish.css">
   <script src="js/main.js" defer></script>
   <script src="js/form.js" defer></script>
 </head>
@@ -70,10 +71,9 @@
         <span class="logo-sub">Panna · Est. Resort</span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#rooms">Rooms</a>
-        <a href="#dining">Dining</a>
-        <a href="#events">Events</a>
-        <a href="#explore">Explore</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -85,10 +85,9 @@
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
       <a href="#rooms" onclick="closeMobile()">Rooms</a>
-      <a href="#dining" onclick="closeMobile()">Dining</a>
-      <a href="#events" onclick="closeMobile()">Events</a>
-      <a href="#explore" onclick="closeMobile()">Explore Panna</a>
       <a href="#gallery" onclick="closeMobile()">Gallery</a>
       <a href="#contact" onclick="closeMobile()">Contact</a>
       <a href="#booking" class="mobile-book" onclick="closeMobile()">Book Now</a>
@@ -110,7 +109,7 @@
         <p class="hero-desc reveal-up delay-2">Panna's landmark hotel — steps from the Tiger Reserve, temples & diamond country. Luxurious comfort, legendary hospitality.</p>
         <div class="hero-actions reveal-up delay-3">
           <a href="#booking" class="btn-gold">Reserve Your Stay</a>
-          <a href="#explore" class="btn-ghost">Explore Panna</a>
+          <a href="#rooms" class="btn-ghost">View Rooms</a>
         </div>
         <div class="hero-badges reveal-up delay-4">
           <div class="badge">🐯 Tiger Reserve 1.5km</div>
@@ -120,10 +119,10 @@
         </div>
       </div>
 
-      <div class="hero-scroll">
+      <a class="hero-scroll" href="#about" aria-label="Scroll down to learn about the hotel">
         <span>Discover</span>
-        <div class="scroll-arrow">↓</div>
-      </div>
+        <div class="mouse" aria-hidden="true"></div>
+      </a>
 
       <div class="slide-dots">
         <button class="dot active" onclick="goSlide(0)" aria-label="Slide 1"></button>
@@ -406,16 +405,15 @@
           <div class="footer-social" role="navigation" aria-label="Footer social links">
             <a href="https://www.facebook.com/Shanvilandmarkresortpanna/" target="_blank" rel="noopener noreferrer" aria-label="Hotel on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.5l.5-3h-3V7.5c0-.8.3-1.5 1.5-1.5H16V3.2c-.3 0-1.2-.2-2.2-.2-2.2 0-3.8 1.4-3.8 4V11H8v3h2v8h3.5z"/></svg></a>
             <a href="https://maps.app.goo.gl/KbRtkq2R9STTNjx19" target="_blank" rel="noopener noreferrer" aria-label="Hotel on Google Business"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5z"/></svg></a>
-            <a href="https://wa.me/919859858383" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp the hotel"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 3.1 17L2 22l5.2-1.4A11.8 11.8 0 1 0 20.5 3.5zm-7.4 3.5c.5 0 1.1.1 1.5.3.4.2.8.7.9 1.2.2.8.5 1.5.1 2.1-.4.6-1 1.1-1.5 1.5-.3.3-.4.6-.2 1 .4.9 1.4 2 2.2 2.8.7.7 1.7 1.7 2.7 2.1.4.2.8.2 1.1-.1.4-.4.9-1.2 1.4-1.5.5-.2 1-.1 1.5.1.7.3 1.4.8 2 .9.6.1 1.2.1 1.5.7-.4.6-1.3 1.4-1.8 1.8-.9.7-2 .7-3.1.3-1.5-.4-2.9-1.2-4-2.3-1.5-1.5-2.5-3.3-3-5.3-.3-1.2-.2-2.5.3-3.6.2-.5.5-.8.8-1.1.7-.6 1.1-.7 1.5-.7z"/></svg></a>
+            <a href="https://wa.me/919859858383" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp the hotel"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
           </div>
         </div>
         <div class="footer-col">
           <div class="footer-heading">Quick Links</div>
           <ul>
+            <li><a href="#about">About the Hotel</a></li>
+            <li><a href="#experience">Dining &amp; Events</a></li>
             <li><a href="#rooms">Rooms &amp; Suites</a></li>
-            <li><a href="#dining">Restaurant</a></li>
-            <li><a href="#events">Weddings &amp; Events</a></li>
-            <li><a href="#explore">Explore Panna</a></li>
             <li><a href="#gallery">Photo Gallery</a></li>
             <li><a href="#booking">Book Direct</a></li>
           </ul>
@@ -445,8 +443,8 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Hotel Shanvi Landmark, Panna. All rights reserved.</p>
-        <p class="footer-credit">Website designed to showcase the full potential of Shanvi Landmark Resort.</p>
+        <p>© <span id="year">2026</span> Hotel Shanvi Landmark, Panna. All rights reserved.</p>
+        <p class="footer-credit">Website by Aarunya Web Solutions</p>
       </div>
     </div>
   </footer>

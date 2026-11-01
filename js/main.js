@@ -189,3 +189,18 @@ document.querySelectorAll('.gm-item img').forEach((img) => {
     document.body.appendChild(overlay);
   });
 });
+
+/* Booking date guards + footer year */
+(function () {
+  const ci = document.getElementById('checkin'), co = document.getElementById('checkout');
+  const iso = (d) => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  if (ci && co) {
+    ci.min = iso(new Date());
+    ci.addEventListener('change', () => {
+      const next = new Date(ci.value); next.setDate(next.getDate() + 1);
+      co.min = iso(next);
+      if (co.value && co.value <= ci.value) co.value = '';
+    });
+  }
+  const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+})();
